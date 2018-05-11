@@ -1,0 +1,146 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: Ubuntu;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #DE7047;
+  padding: 20px;
+  margin: 0px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #FFDE8D;
+  color: black;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #FFFFFF;
+  color: black;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+.wreaper{
+  width: 100%;
+}
+
+aside{
+  border-right: 3px;
+  position: fixed;
+  text-align: center;
+  width: 10%;
+  height: 540px;
+  float: left;
+  background-color: #F2D98D;
+}
+
+aside li{
+  padding-top: 30px;
+  list-style: none;
+}
+
+aside li ol{
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+aside li ol a{
+  color: black;
+  text-decoration: none;
+}
+aside li ol:hover{
+  background-color: #F2D98D;
+}
+.footer {
+   position: fixed;
+   padding: 20px;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #528540;
+   color: black;
+   text-align: center;
+}
