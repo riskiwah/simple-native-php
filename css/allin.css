@@ -2,6 +2,7 @@
   margin: 0px;
   padding: 0px;
   font-family: Ubuntu;
+  box-sizing: border-box;
 }
 
 /* Style the header with a grey background and some padding */
@@ -103,7 +104,7 @@ button {
 button:hover {
     opacity:1;
 }
-.wreaper{
+/* .wreaper{
   width: 100%;
 }
 
@@ -133,7 +134,7 @@ aside li ol a{
 }
 aside li ol:hover{
   background-color: #F2D98D;
-}
+} */
 .footer {
    position: fixed;
    padding: 20px;
@@ -143,4 +144,47 @@ aside li ol:hover{
    background-color: #528540;
    color: black;
    text-align: center;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+    width: 15%;
+    background-color: #FFDE8D;
+    height: 540px;
+}
+
+/* Middle column */
+.column.middle {
+    width: 75%;
+}
+
+.column.side a{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+}
+
+.column.side a:hover{
+  color: #f1f1f1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
 }
