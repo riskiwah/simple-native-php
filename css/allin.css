@@ -104,37 +104,6 @@ button {
 button:hover {
     opacity:1;
 }
-/* .wreaper{
-  width: 100%;
-}
-
-aside{
-  border-right: 3px;
-  position: fixed;
-  text-align: center;
-  width: 10%;
-  height: 540px;
-  float: left;
-  background-color: #F2D98D;
-}
-
-aside li{
-  padding-top: 30px;
-  list-style: none;
-}
-
-aside li ol{
-  padding-top: 10px;
-  padding-bottom: 10px;
-
-}
-aside li ol a{
-  color: black;
-  text-decoration: none;
-}
-aside li ol:hover{
-  background-color: #F2D98D;
-} */
 .footer {
    position: fixed;
    padding: 20px;
