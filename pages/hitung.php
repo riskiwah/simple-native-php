@@ -19,7 +19,7 @@
    </div>
    <div class="column middle">
      <h2>Hitung</h2>
-      <form action="#" method="post">
+      <form action="../func/hitung.php" method="post">
         <b>Masukkan berat badan</b> <input type="number" name="berat_badan" /><br />
         <b>Masukkan tinggi badan</b> <input type="number" name="tinggi_badan" /><br />
         <b>Masukkan gula darah</b> <input type="number" name="gula_darah" /><br />
