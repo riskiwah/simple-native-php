@@ -12,9 +12,9 @@ if($runquery->num_rows > 0){
   $_SESSION['mail'] = $email;
   header("Location:../pages/dashboard.php");
 }
-// } elseif ($runquery->num_rows = 999) {
+//  elseif ($runquery->num_rows = 999) {
 //   session_start();
-//   $_SESSION['admin']=$email
+//   $_SESSION['mail']=$email;
 //   header("Location:../admin/index.php");
 // }
   else {
