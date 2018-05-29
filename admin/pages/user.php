@@ -1,5 +1,5 @@
 <?php
-	include("func/db.php");
+	include("../func/db.php");
 	$query = mysqli_query($connect,"SELECT * FROM user");
 ?>
 <html>
@@ -20,42 +20,36 @@
       <div class="column side">
         <a href="dashboard.php">Dashboard Admin</a>
         <a href="user.php">User</a>
-          <a href="makanan.php">List Makanan</a>
-          <a href="olahraga.php">List Olahraga</a>
+        <a href="makanan.php">List Makanan</a>
+        <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">
-        <table id="daftar-mahasiswa">
-					<thead>
-						<tr>
-							<th>No</th>
-							<th>Nama</th>
-							<th>Email</th>
-							<th>Password</th>
-							<th>Alamat</th>
-							<th>Dob</th>
-						</tr>
-					</thead>
-					<tbody>
-						<?php
-							$i = 1;
-							while ($pr = mysqli_fetch_array($query)) { ?>
-									<tr>
-										<td><?php echo $i; ?></td>
-										<td><?php echo $pr['nama']; ?></td>
-										<td><?php echo $pr['email']; ?></td>
-										<td><?php echo $pr['password']; ?></td>
-										<td><?php echo $pr['alamat']; ?></td>
-                    <td><?php echo $pr['dob']; ?></td>
-										<td>
-											<a href="edit.php?nim=<?php echo $pr['nama'] ; ?>">Edit</a>
-											<a href="proses/proses_hapus_data.php?nim=<?php echo $pr['nim'] ; ?> " onclick="return klikHapus();" >Hapus</a>
-										</td>
-									</tr>
-				 				<?php $i++;
-				 			} ?>
-					</tbody>
-				</table>
-    </div>
+				<table style="border">
+				<tr>
+					<th width="3%">No</th>
+					<th width="5%">nama</th>
+					<th width="15%">email</th>
+					<th width="20%">password</th>
+					<th width="30%">alamat</th>
+					<th width="5%">Aksi</th>
+				</tr>
+				<?php
+					$i = 1;
+					while ($doc = mysqli_fetch_array($query)) { ?>
+					<tr>
+						<td><?php echo $i; ?></td>
+						<td><?php echo $doc['nama']; ?></td>
+						<td><?php echo $doc['email']; ?></td>
+						<td><?php echo $doc['password']; ?></td>
+						<td><?php echo $doc['alamat']; ?></td>
+						<td>
+							<a href="edit-data.php?nim=<?php echo $doc['nama'] ; ?>">Edit</a>
+							<a href="hapus-data.php?nim=<?php echo $doc['nama'] ; ?> " >Hapus</a>
+						</td>
+					</tr>
+				 <?php $i++;
+				 } ?>
+		</table>
     <div class="footer">
       <p>
         This is Footer
