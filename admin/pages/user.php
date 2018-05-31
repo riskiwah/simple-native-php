@@ -20,7 +20,7 @@
       <div class="column side">
         <a href="dashboard.php">Dashboard Admin</a>
         <a href="user.php">User</a>
-        <a href="makanan.php">List Makanan</a>
+        <a href="list-makanan.php">List Makanan</a>
         <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">

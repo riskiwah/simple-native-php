@@ -1,3 +1,9 @@
+<?php
+	include("../func/db.php");
+	$makanan = $_GET['makanan'];
+	$query = mysqli_query($connect,"SELECT * FROM makanan WHERE makanan = '$makanan'");
+	$result = mysqli_fetch_array($query);
+?>
 <html>
   <head>
     <title>Welcome Admin</title>
@@ -20,10 +26,10 @@
           <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">
-        <form method="post" action="../func/tambah-makanan.php">
-          <b>Makanan</b> <input type="text" name="makanan" /><br />
-          <b>Deskripsi</b> <input type="text" name="deskripsi" /><br />
-          <b>Kalori</b> <input type="number" name="kalori" /><br />
+        <form method="post" action="../func/edit-makanan.php">
+          <b>Makanan</b> <input type="text" name="makanan" required value="<?php echo $result['makanan']; ?>" /><br />
+          <b>Deskripsi</b> <input type="text" name="deskripsi" required value="<?php echo $result['deskripsi']; ?>"/><br />
+          <b>Kalori</b> <input type="number" name="kalori" required value="<?php echo $result['kalori']; ?>" /><br />
           <input type="submit" name="submit" value="Submit"><br />
           <input type="reset" name="reset" value="Reset">
         </form>

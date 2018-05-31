@@ -11,4 +11,5 @@
     '$tinggi_badan', '$gula_darah', '$tensi')");
 
 }
+header("Location: ../pages/hitung.php")
  ?>

@@ -20,10 +20,10 @@
           <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">
-        <form method="POST" action="../func/tambah-olahraga.php">
+        <form method="post" action="../func/tambah-olahraga.php">
           <b>Jenis Olahraga</b> <input type="text" name="jenis_olahraga" /><br />
           <b>Kalori yang dibakar</b> <input type="number" name="bakar" /><br />
-          <input type="button" name="submit" value="Submit"><br />
+          <input type="submit" name="submit" value="Submit"><br />
           <input type="reset" name="reset" value="Reset">
         </form>
       </div>

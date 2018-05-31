@@ -1,3 +1,7 @@
+<?php
+	include("../func/db.php");
+	$query = mysqli_query($connect,"SELECT * FROM kesehatanmu ORDER BY id desc limit 1");
+?>
 <html>
  <head>
    <title>Dashboard</title>
@@ -26,6 +30,27 @@
         <b>Masukkan tensi</b> <input type="number" name="tensi" /><br />
         <input class="submit" type="submit" value="Hitung!" name="submit"><br />
       </form>
+
+     <table style="border">
+     <tr>
+       <th>ID</th>
+       <th>STATUS</th>
+     </tr>
+     <?php
+
+       while ($doc = mysqli_fetch_array($query)) { ?>
+       <tr>
+
+         <td><?php echo $doc['id']; ?></td>
+         <td><?php
+            if($doc['tensi'] <150 ) echo "TIDAK";
+            else echo "DIABETES";
+          ?></td>
+
+       </tr>
+      <?php
+      } ?>
+    </table>
    </div>
  </div>
  <div class="footer">

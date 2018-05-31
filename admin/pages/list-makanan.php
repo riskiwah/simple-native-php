@@ -1,3 +1,7 @@
+<?php
+	include("../func/db.php");
+	$query = mysqli_query($connect,"SELECT * FROM makanan");
+?>
 <html>
   <head>
     <title>Welcome Admin</title>
@@ -21,6 +25,30 @@
       </div>
       <div class="column middle">
           <a href="tambah-makanan.php">Tambah Data</a>
+          <table style="border:1px solid black;">
+  				<tr>
+  					<th width="3%">No</th>
+  					<th width="5%">Makanan</th>
+  					<th width="15%">Deskripsi</th>
+            <th width="15%">Kalori</th>
+  					<th width="5%">Aksi</th>
+  				</tr>
+  				<?php
+  					$i = 1;
+  					while ($doc = mysqli_fetch_array($query)) { ?>
+  					<tr><center>
+  						<td><?php echo $i; ?></td>
+  						<td><?php echo $doc['makanan']; ?></td>
+  						<td><?php echo $doc['deskripsi']; ?></td>
+              <td><?php echo $doc['kalori']; ?></td>
+  						<td>
+  							<a href="edit-makanan.php?makanan=<?php echo $doc['makanan'] ; ?>">Edit</a>
+  							<a href="hapus-data.php?nim=<?php echo $doc['nama'] ; ?> " >Hapus</a>
+  						</td>
+  					</tr></center>
+  				 <?php $i++;
+  				 } ?>
+  		</table>
       </div>
     </div>
     <div class="footer">

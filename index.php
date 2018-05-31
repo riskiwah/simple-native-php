@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="header">
-      <a href="#default" class="header">Welcome !</a>
+      <a href="#default" class="header">Health-Calc!</a>
       <div class="header-right">
         <a class="active" href="home">Home</a>
         <a class="#contact">Contact</a>
