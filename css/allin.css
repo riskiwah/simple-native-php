@@ -86,8 +86,12 @@
     }
 }
 hr {
-    border: 1px solid #f1f1f1;
+    border: 0px solid white;
     margin-bottom: 25px;
+}
+
+br {
+  margin-bottom: 25px;
 }
 
 /* Set a style for all buttons */
@@ -104,6 +108,32 @@ button {
 button:hover {
     opacity:1;
 }
+
+form .my-input {
+	margin-bottom: 10px;
+}
+
+form .my-input:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+form label {
+	width: 150px;
+	float: left;
+	padding-top: 7px;
+  font-weight: bold;
+}
+
+form input {
+	display: inline-block;
+	overflow: hidden;
+	padding: 7px 15px;
+	border-radius: 5px;
+	border: 1px solid #aaa;
+}
+
 .footer {
    position: fixed;
    padding: 20px;

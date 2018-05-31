@@ -20,10 +20,11 @@
           <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">
+        <div class="my-input">
         <form method="post" action="../func/tambah-makanan.php">
-          <b>Makanan</b> <input type="text" name="makanan" /><br />
-          <b>Deskripsi</b> <input type="text" name="deskripsi" /><br />
-          <b>Kalori</b> <input type="number" name="kalori" /><br />
+          <label>Makanan</label> <input type="text" name="makanan" /><br />
+          <label>Deskripsi</label> <input type="text" name="deskripsi" /><br />
+          <label>Kalori</label> <input type="number" name="kalori" /><br />
           <input type="submit" name="submit" value="Submit"><br />
           <input type="reset" name="reset" value="Reset">
         </form>

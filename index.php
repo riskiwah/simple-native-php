@@ -22,14 +22,14 @@
       <div class="column" style="background-color:#F4F4F4;">
         <h2>Register</h2>
         <div class="login">
-          <div class="form">
+          <div class="my-input">
             <form action="func/register.php" method="post" style="border:1px solid #F4F4F4">
-              <b>Nama</b> <input type="text" name="nama" placeholder="Nama" /><hr>
-              <b>Email</b> <input type="email" name="email" placeholder="Email" /><hr />
-              <b>Password</b> <input type="password" name="password" placeholder="Password" /><hr />
-              <b>Confirm Password</b> <input type="password" name="password2" placeholder="Re Type Password" /><hr />
-              <b>Alamat</b> <input type="text" name="alamat" placeholder="Alamat" /><hr />
-              <b>Date Of Birth</b> <input type="datetime" name="dob" placeholder="Date of Birth" /><hr />
+              <label>Nama</label> <input type="text" name="nama" placeholder="Nama" /><hr>
+              <label>Email</label> <input type="email" name="email" placeholder="Email" /><hr />
+              <label>Password</label> <input type="password" name="password" placeholder="Password" /><hr />
+              <label>Confirm Password</label> <input type="password" name="password2" placeholder="Re Type Password" /><hr />
+              <label>Alamat</label> <input type="text" name="alamat" placeholder="Alamat" /><hr />
+              <label>Date Of Birth</label> <input type="date" name="dob" placeholder="Date of Birth" /><hr />
               <input class="submit" type="submit" value="Register" name="submit"><hr />
               <a href="pages/login.php">Sudah Register ?</a>
             </form>

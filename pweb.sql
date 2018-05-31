@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 26, 2018 at 03:54 AM
+-- Generation Time: May 31, 2018 at 04:35 PM
 -- Server version: 10.0.34-MariaDB-0ubuntu0.16.04.1
 -- PHP Version: 7.0.30-0ubuntu0.16.04.1
 
@@ -59,8 +59,48 @@ CREATE TABLE `kesehatanmu` (
 --
 
 INSERT INTO `kesehatanmu` (`id`, `berat_badan`, `tinggi_badan`, `gula_darah`, `tensi`) VALUES
-(1, 3, 3, 3, 3),
-(2, 0, 0, 0, 0);
+(3, 60, 150, 30, 30),
+(4, 45, 150, 30, 150),
+(5, 123123, 123123, 123123, 200);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `makanan`
+--
+
+CREATE TABLE `makanan` (
+  `id` int(11) NOT NULL,
+  `makanan` varchar(255) NOT NULL,
+  `deskripsi` varchar(255) NOT NULL,
+  `kalori` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `makanan`
+--
+
+INSERT INTO `makanan` (`id`, `makanan`, `deskripsi`, `kalori`) VALUES
+(1, 'Nasi', 'Nasi', 120);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `olahraga`
+--
+
+CREATE TABLE `olahraga` (
+  `id` int(10) NOT NULL,
+  `jenis_olahraga` varchar(255) NOT NULL,
+  `bakar` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `olahraga`
+--
+
+INSERT INTO `olahraga` (`id`, `jenis_olahraga`, `bakar`) VALUES
+(1, 'qwe', 123);
 
 -- --------------------------------------------------------
 
@@ -83,8 +123,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `nama`, `email`, `password`, `alamat`, `dob`) VALUES
 (0, 'asd', 'asd@asd.com', 'asd', 'asd', '0000-00-00'),
-(1, 'riskiwah', 'riskic44@gmail.com', 'mendol123', 'asd', '0000-00-00'),
-(999, 'admin', 'admin@riskiwah.com', 'admin', 'server', '2018-05-01');
+(1, 'riskiwah', 'riskic44@gmail.com', 'mendol123', 'asd', '0000-00-00');
 
 --
 -- Indexes for dumped tables
@@ -100,6 +139,18 @@ ALTER TABLE `admin`
 -- Indexes for table `kesehatanmu`
 --
 ALTER TABLE `kesehatanmu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `makanan`
+--
+ALTER TABLE `makanan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `olahraga`
+--
+ALTER TABLE `olahraga`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -121,7 +172,17 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `kesehatanmu`
 --
 ALTER TABLE `kesehatanmu`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `makanan`
+--
+ALTER TABLE `makanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `olahraga`
+--
+ALTER TABLE `olahraga`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -27,7 +27,7 @@
           <a href="tambah-makanan.php">Tambah Data</a>
           <table style="border:1px solid black;">
   				<tr>
-  					<th width="3%">No</th>
+  					<th width="1%">No</th>
   					<th width="5%">Makanan</th>
   					<th width="15%">Deskripsi</th>
             <th width="15%">Kalori</th>

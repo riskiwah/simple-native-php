@@ -24,13 +24,13 @@
         <a href="list-olahraga.php">List Olahraga</a>
       </div>
       <div class="column middle">
-				<table style="border">
+				<table style="border: 1px solid black;">
 				<tr>
-					<th width="3%">No</th>
-					<th width="5%">nama</th>
-					<th width="15%">email</th>
-					<th width="20%">password</th>
-					<th width="30%">alamat</th>
+					<th width="1%">No</th>
+					<th width="3%">nama</th>
+					<th width="12%">email</th>
+					<th width="15%">password</th>
+					<th width="15%">alamat</th>
 					<th width="5%">Aksi</th>
 				</tr>
 				<?php

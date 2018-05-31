@@ -27,8 +27,8 @@
         <a href="tambah-olahraga.php">Tambah Data</a>
         <table style="border:1px solid black;">
 				<tr>
-					<th width="3%">No</th>
-					<th width="5%">Jenis Olahraga</th>
+					<th width="1%">No</th>
+					<th width="3%">Jenis Olahraga</th>
 					<th width="15%">Kalori yang dbakar</th>
 					<th width="5%">Aksi</th>
 				</tr>
